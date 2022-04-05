@@ -3,4 +3,14 @@ extends layout
 block content
   h1= title
   p This is my Second Heroku server
-  button(type="button", class="btn btn-success", onClick = "update()") Press Me
+  button(type="button", class="btn btn-success", onClick = "moreclaps()") Press Me
+  <br>
+  div(id="target") Clap for me
+
+  script.
+    var clap_count=0;
+    function moreClaps(){
+      clap_count=clap_count+2;
+      document.getElementById("target").innerHTML="Clap "+clap_count+" Times";
+    }
+  
