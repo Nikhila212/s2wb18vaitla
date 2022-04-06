@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var BarbequeRouter = require('./routes/Barbeque');
 var addmodsRouter = require('./routes/addmods');
+var selectorRouter = require('./routes/selector');
 
 
 
@@ -27,6 +28,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/Barbeque', BarbequeRouter);
 app.use('/addmods', addmodsRouter);
+app.use('/selector', selectorRouter);
 
 
 
