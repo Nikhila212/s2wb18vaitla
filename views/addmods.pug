@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  h1= title
+  p Number of rows #{query.rows} and columns #{query.cols}
+  - var rows = Number(query.rows)
+  - var colms = Number(query.colms)
+  if Number.isNaN(rows) || Number.isNaN(colms )
+    p Rows/Columns is not a number 
+  else if rows>10 || rows<1
+    p Rows should be between 1 and 10
+  else if colms>10 || colms<1
+    p Columns should be between 1 and 10
+  else
+    table#outer
+      - for(let i=0; i<rows; i++) {
+        tr#middle
+          - for(let j=0;j<colms;j++){
+            td= i+j*j 
+          -}
+      -}
