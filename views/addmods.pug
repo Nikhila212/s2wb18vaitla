@@ -6,7 +6,7 @@ block content
   p Number of rows #{query.rows} and columns #{query.cols}
   - var rows = Number(query.rows)
   - var cols = Number(query.cols)
-  if Number.isInteger(rows) || Number.isInteger(cols)
+  if Number.isNaN(rows) || Number.isNaN(cols)
     p Rows/Columns is not a number 
   else if rows>10 || rows<1
     p Rows should be between 1 and 10
